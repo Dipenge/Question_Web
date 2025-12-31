@@ -1,0 +1,56 @@
+/* Color Palette & Variables */
+:root {
+    --primary-gold: #D4AF37;
+    --studio-black: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth Scrolling for modern feel */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Gold Gradient Text */
+.gold-gradient-text {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Premium Card Hover Effect */
+.glass-card {
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-gold);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.glass-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Button Pulse Animation */
+.btn-premium {
+    position: relative;
+    transition: var(--transition);
+}
+
+.btn-premium:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | QUESTION MUSIC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@900&display=swap');
+        
+        body { 
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                        url('https://raw.githubusercontent.com/Dipenge/QuestionImag/main/quetionLogo.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+        }
+
+        .gold-accent { color: #D4AF37; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .glass-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+        }
+
+        .folio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Lightbox (Modal) Styles */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="w-full bg-black/70 backdrop-blur-xl px-6 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-white/10">
+        <div class="text-xl font-bold tracking-tighter uppercase font-['Montserrat']">
+            QUESTION <span class="gold-accent">MUSIC</span>
+        </div>
+        <a href="index.html" class="text-xs uppercase tracking-widest font-bold bg-white/10 hover:bg-white hover:text-black transition px-5 py-2.5 rounded-full">
+            <i class="fas fa-arrow-left mr-2"></i> Back
+        </a>
+    </nav>
+
+    <header class="py-16 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-black uppercase font-['Montserrat'] mb-2 tracking-tighter">Studio <span class="gold-accent">Vault</span></h1>
+        <p class="text-gray-400 text-sm uppercase tracking-[0.3em]">Click an image to expand</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+    </main>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="absolute top-10 right-10 text-white text-4xl cursor-pointer">&times;</span>
+        <img id="lightbox-img" src="" alt="Full Screen Preview">
+    </div>
+
+    <script>
+    // Updated list including your new images 25, 26, 27, 28, and 29
+    const images = [
+        "folio2.jpeg", "folio3.jpeg", "folio4.jpeg", "folio5.jpeg", "folio6.jpeg",
+        "folio7.jpeg", "folio8.jpeg", "folio9.jpeg", "folio10.jpeg", "folio11.jpeg",
+        "folio12.jpeg", "folio13.jpeg", "folio14.jpeg", "folio16.jpeg", "folio17.jpeg",
+        "folio18.jpeg", "folio19.jpeg", "folio20.jpeg", "folio21.jpeg", "folio22.jpeg",
+        "folio23.jpeg", "folio24.jpeg", "folio25.jpeg", "folio26.jpeg", "folio27.jpeg", 
+        "folio28.jpeg", "folio29.jpeg"
+    ];
+
+    const grid = document.getElementById('gallery-grid');
+
+    // Inject Images into the Grid
+    images.forEach((imgName) => {
+        const rawUrl = `https://raw.githubusercontent.com/Dipenge/QuestionImag/main/${imgName}`;
+        const card = document.createElement('div');
+        card.className = "glass-card";
+        
+        // Open lightbox on click
+        card.onclick = () => openLightbox(rawUrl);
+        
+        card.innerHTML = `
+            <div class="overflow-hidden">
+                <img src="${rawUrl}" class="folio-img" alt="Question Music Studio Session">
+            </div>
+            <div class="p-4 bg-black/20">
+                <p class="text-gold-accent text-[10px] font-bold uppercase tracking-widest">Studio Session</p>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+
+    // Lightbox Logic
+    function openLightbox(url) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = url;
+        lightbox.style.display = 'flex';
+        // Prevent background scrolling when lightbox is open
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+        // Restore scrollingS
+        document.body.style.overflow = 'auto'; 
+    }
+</script>
+
+</body>
+</html>

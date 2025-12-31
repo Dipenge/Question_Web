@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION MUSIC | Professional Sound. Creative Freedom.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@800&display=swap');
+        
+        html { scroll-behavior: smooth; }
+
+        /* Smooth Entrance Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), 
+                        url('https://raw.githubusercontent.com/Dipenge/QuestionImag/main/quetionLogo.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        
+        .animate-content { animation: fadeInUp 1s ease-out forwards; }
+        .gold-accent { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        
+        /* Glassmorphism Logic */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        #scrollToTop.show { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 border-b border-white/10 px-6 py-4 flex justify-between items-center bg-black/60 backdrop-blur-xl">
+        <div class="text-2xl font-bold tracking-tighter uppercase font-['Montserrat']">
+            QUESTION <span class="gold-accent">MUSIC</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-bold">
+            <a href="index.html" class="hover:text-gold-accent transition">Home</a>
+            <a href="#services" class="hover:text-gold-accent transition">Services</a>
+            <a href="#reviews" class="hover:text-gold-accent transition">Reviews</a>
+            <a href="portfolio.html" class="hover:text-gold-accent transition">Portfolio</a>
+            <a href="contact.html" class="hover:text-gold-accent transition">Contact</a>
+        </div>
+        <a href="https://wa.me/27685948654" class="bg-gold text-black px-6 py-2 rounded-full font-bold text-xs uppercase tracking-tighter hover:bg-white transition shadow-lg">
+            Book Session
+        </a>
+    </nav>
+
+    <header class="h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl animate-content">
+            <h1 class="text-5xl md:text-8xl font-black mb-6 font-['Montserrat'] uppercase tracking-tight">
+                QUESTION MUSIC
+                
+                <P ><span class="gold-accent">Recording Studio</span></P>
+            </h1>
+            <p class="text-lg md:text-2xl font-light mb-10 text-gray-300 tracking-wide">
+                Cape Town's premier destination for high-fidelity production.
+            </p>
+           <div class="flex flex-col md:flex-row gap-4 justify-center">
+    
+    <a href="https://m.youtube.com/playlist?list=OLAK5uy_l6qA1j9cqht6x30NceXf2rAclURkjiuc4" target="_blank" class="border-2 border-white px-8 py-3 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Listen Now</a>
+    
+    <a href="contact.html" class="bg-gold text-black px-8 py-3 rounded-sm font-bold uppercase tracking-widest hover:opacity-90 transition">Find Us</a>
+</div>
+        </div>
+    </header>
+
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+
+
+        <div class="text-center mb-16 animate-content">
+            <h2 class="text-4xl font-bold uppercase mb-4">Our Services</h2>
+            <div class="h-1 w-20 bg-gold mx-auto"></div>
+        </div>
+
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="glass-card p-8 rounded-xl text-center">
+                <i class="fa-solid fa-microphone text-4xl gold-accent mb-6"></i>
+                <h3 class="font-bold mb-2">Recording</h3>
+                <p class="text-gray-400 text-sm">Pristine vocal and instrument tracking.</p>
+            </div>
+
+
+
+
+            <div class="glass-card p-8 rounded-xl text-center">
+                <i class="fa-solid fa-sliders text-4xl gold-accent mb-6"></i>
+                <h3 class="font-bold mb-2">Mixing</h3>
+                <p class="text-gray-400 text-sm">Industry standard radio-ready sound.</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <i class="fa-solid fa-compact-disc text-4xl gold-accent mb-6"></i>
+                <h3 class="font-bold mb-2">Production</h3>
+                <p class="text-gray-400 text-sm">Custom beats and sound design.</p>
+            </div>
+            <div class="glass-card p-8 rounded-xl text-center">
+                <i class="fa-solid fa-headset text-4xl gold-accent mb-6"></i>
+                <h3 class="font-bold mb-2">Voice-Over</h3>
+                <p class="text-gray-400 text-sm">Professional audio for film & web.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold uppercase mb-4">Artist <span class="gold-accent">Feedback</span></h2>
+        <div class="flex items-center justify-center space-x-2 text-xs text-gray-400 uppercase tracking-widest">
+            <img src="https://raw.githubusercontent.com/Dipenge/goooglee/main/googlelogo.jpeg" class="w-5 h-5 rounded-sm" alt="Google">
+            <span>Verified Google Reviews</span>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <script>
+    const artists = [
+        { 
+            name: "Jonas Wiz", 
+            role: "Hip-Hop Artist", 
+            stars: 5, 
+            text: "The best vocal recording quality I've had in Cape Town. Clean and punchy.",
+            image: "https://raw.githubusercontent.com/Dipenge/wiz/main/wizy.jpeg" 
+        },
+        { 
+            name: "Jacob Dipenge.", 
+            role: "Singer/Songwriter", 
+            stars: 5, 
+            text: "Incredible mixing. My tracks finally sound radio-ready. Highly recommended.",
+            image: "https://raw.githubusercontent.com/Dipenge/rev/main/jacob.jpeg"
+        },
+        { name: "Low-Fi Kid", role: "Producer", stars: 4, text: "Top tier gear and even better workflow. A creative home for any artist." },
+        { name: "Micaela P.", role: "Vocalist", stars: 4, text: "Found my sound here. They understood my vision from the very first session." },
+        { 
+            name: "Nino Ferera", 
+            role: "Rapper", 
+            stars: 5, 
+            text: "Clean, professional, and fast turnaround. Best studio in Parow area.",
+            // Added 's photo here
+            image: "https://raw.githubusercontent.com/Dipenge/nino/main/nino.jpeg"
+        },
+        { name: "Alex Ruiz", role: "EDM Producer", stars: 3, text: "The mastering made my EP sound huge. I won't go anywhere else now." }
+    ];
+
+    document.write(artists.map((artist, i) => `
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden">
+            <img src="https://raw.githubusercontent.com/Dipenge/goooglee/main/googlelogo.jpeg" class="absolute top-4 right-4 w-4 h-4 opacity-40 rounded-sm">
+            
+            <div>
+                <div class="flex text-yellow-400 mb-4 text-[10px] space-x-1">
+                    ${'<i class="fas fa-star"></i>'.repeat(artist.stars)}
+                    ${'<i class="fas fa-star text-gray-600"></i>'.repeat(5 - artist.stars)}
+                </div>
+                <p class="text-gray-300 italic mb-6 text-sm leading-relaxed">"${artist.text}"</p>
+            </div>
+
+            <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                <div class="flex items-center space-x-3">
+                    <img src="${artist.image || 'https://i.pravatar.cc/150?u=' + i}" 
+                         class="w-10 h-10 rounded-full border border-gold-accent shadow-md object-cover aspect-square">
+                    <div>
+                        <h4 class="font-bold uppercase text-[11px]">${artist.name}</h4>
+                        <p class="text-gold-accent text-[9px] uppercase font-bold tracking-widest">${artist.role}</p>
+                    </div>
+                </div>
+                <img src="https://raw.githubusercontent.com/Dipenge/goooglee/main/googlelogo.jpeg" class="w-3 h-3 rounded-full opacity-80">
+            </div>
+        </div>
+    `).join(''));
+</script>
+    </div>
+</section>
+
+    <footer class="border-t border-white/10 bg-black/40 backdrop-blur-xl pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-xl font-bold font-['Montserrat']">QUESTION <span class="gold-accent">MUSIC</span></div>
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest text-center">91B Voortrekker Rd, Parow, Cape Town | +27 68 594 8654</p>
+            
+           <div class="flex space-x-6">
+    <a href="https://www.instagram.com/questionmusic1?igsh=cWtha2hxMWZwbW9x" target="_blank" class="text-gray-400 hover:text-gold-accent transition text-lg">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <a href="https://www.facebook.com/share/1Adr35pAFv/" target="_blank" class="text-gray-400 hover:text-[#1877F2] transition text-lg">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@questionmusic3158" target="_blank" class="text-gray-400 hover:text-[#FF0000] transition text-lg">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://wa.me/27685948654" target="_blank" class="text-gray-400 hover:text-[#25D366] transition text-lg">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+        </div>
+
+    </footer>
+
+    <button id="scrollToTop" class="fixed bottom-8 right-8 z-[60] glass-card w-12 h-12 rounded-full flex items-center justify-center text-gold-accent opacity-0 translate-y-10 transition-all duration-500 cursor-pointer shadow-2xl">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollToTop");
+        window.onscroll = function() {
+            if (window.scrollY > 400) { scrollBtn.classList.add("show"); } 
+            else { scrollBtn.classList.remove("show"); }
+        };
+        scrollBtn.onclick = function() { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+    </script>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* ... [Your Previous Styles] ... */
+
+        /* INFINITY CAROUSEL ANIMATION */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 5)); } /* Adjust based on logo count */
+        }
+
+        .slider {
+            height: 100px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .slider::before, .slider::after {
+            background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 10); /* Needs to be double the logo list for seamless loop */
+        }
+
+        .slide {
+            height: 100px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .partner-logo {
+            filter: grayscale(100%) brightness(200%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            max-height: 50px;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="py-12 bg-black/40 border-y border-white/5">
+        <div class="text-center mb-8">
+            <p class="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold">Trusted by Industry Leaders</p>
+        </div>
+        <div class="slider">
+            <div class="slide-track" id="partner-track">
+                </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-black/40 border-y border-white/5 overflow-hidden">
+        <div class="slider">
+            <div class="slide-track" id="partner-track">
+                </div>
+        </div>
+    </section>
+
+    <footer class="... ">
+        </footer>
+
+    <script>
+        // Scroll button code...
+    </script>
+
+    <script>
+    const partnerLogos = [
+        // Your Custom Logo
+        { url: "https://raw.githubusercontent.com/Dipenge/QuestionImag/main/quetionLogo.jpeg", invert: false },
+        
+        // Industry Partners
+        { url: "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg", invert: true },
+        { url: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", invert: true },
+        { url: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg", invert: true }
+    ];
+
+    const track = document.getElementById('partner-track');
+    
+    // We duplicate the list 3 times for a smaller list to ensure the carousel is always full
+    const fullList = [...partnerLogos, ...partnerLogos, ...partnerLogos]; 
+
+    fullList.forEach(logo => {
+        const slide = document.createElement('div');
+        slide.className = 'slide';
+        
+        // Apply white filter to industry logos, leave Question Music as is
+        const filterStyle = logo.invert ? "filter: brightness(0) invert(1);" : "";
+        
+        slide.innerHTML = `
+            <img src="${logo.url}" 
+                 class="partner-logo" 
+                 style="${filterStyle} opacity: 0.8;" 
+                 alt="Partner">`;
+        track.appendChild(slide);
+    });
+</script>
+</body>
+</html>
